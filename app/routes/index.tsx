@@ -1,8 +1,8 @@
 import { useLoaderData } from "@remix-run/react"
 import { json, LoaderFunction } from "@remix-run/cloudflare"
 
-export const loader: LoaderFunction = () => {
-  const v = TEST_VARIABLE;
+export const loader: LoaderFunction = ({env}) => {
+  const v = env.TEST_VARIABLE;
   return v
 }
 
