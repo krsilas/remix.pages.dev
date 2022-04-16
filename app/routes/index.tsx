@@ -1,16 +1,11 @@
 import { useLoaderData } from "@remix-run/react"
 import { json, LoaderFunction } from "@remix-run/cloudflare"
 
-export const loader: LoaderFunction = ({env}) => {
-  const v = env.TEST_VARIABLE;
-  return v
-}
-
 export default function Index() {
-  const string = useLoaderData()
+  
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix - {string}</h1>
+      <h1>Welcome to Remix</h1>
       <ul>
         <li>
           <a
